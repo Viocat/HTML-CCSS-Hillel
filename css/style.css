@@ -1,19 +1,20 @@
-
+@import url(reset.css);
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:regular&display=swap);
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 body{
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-weight: 400;
     font-style: normal;
     line-height: 20px;
     color: #C0C0C0;
+    background-color: #000000;
 }
 header{
     background-color: #181818;
@@ -66,6 +67,8 @@ header nav li:last-of-type a{
     font-size: 16px;
     letter-spacing: 0.4px;
     color: #000000;
+    border-radius: 14px;
+    display: inline-block;
 }
 
 header nav ul li:last-of-type{
@@ -77,15 +80,18 @@ header nav ul li:last-of-type{
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 71px;
-    background-image: url("../images/bg.jpg");
+    background-image: url(../images/bg.jpg);
     background-size: cover;
-    height: calc(100vh - 83px);
-
+    /* height: calc(100vh - 83px); */
+    max-height: 800px;
+    padding-top: 461px;
+    background-color: #000000;
 }
 
 .main_screen article{
     max-width: 580px;
-    padding-top:60px;
+    /* padding-top:60px; */
+    /* padding: 0 0 400px 0; */
 }
 
 .main_screen article h3{
@@ -113,4 +119,44 @@ header nav ul li:last-of-type{
 .main_screen article p{
     font-size: 14px;
     text-align: center;
+}
+
+.photo-help {
+    background-color: #000000;
+    padding-top: 113px;
+    padding-bottom: 108px;
+}
+.photo-help article{
+    margin: 0 auto;
+    max-width: 571px;
+    text-align: center;
+}
+.photo-help article>h2{
+    font-size: 40px;
+line-height: 1.05; /* 42/40 */
+color: #FFFFFF;
+margin-bottom: 15px;
+}
+
+.photo-help article>h6{
+margin-bottom: 22px;
+}
+
+.photo-help article>a{
+    display: inline-block;
+    padding: 5px 10px 5px 4px;
+    background-color: #fff;
+    border-radius: 14px;
+    color: black;
+letter-spacing: 0.4px;
+}
+
+.photo-help article>a::before{
+    content: '';
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 50%;
+    padding: 16px;
+    margin-right: 6px;
+    vertical-align: middle;
 }
