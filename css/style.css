@@ -89,9 +89,8 @@ header nav ul li:last-of-type{
     padding-bottom: 71px;
     background-image: url(../images/bg.jpg);
     background-size: cover;
-    /* height: calc(100vh - 83px); */
+     height: calc(100vh - 83px);
     max-height: 800px;
-    padding-top: 461px;
     background-color: #000000;
 }
 
