@@ -289,7 +289,7 @@ footer .flex-container {
     margin-bottom: 10px;
 }
 
-h5 {
+.caption {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #C0C0C0;
