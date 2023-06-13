@@ -5,31 +5,35 @@
 @font-face {
     font-family: 'Circular Std';
     src: local('Circular Std Book'), local('Circular-Std-Book'),
-    url("../fonts/CircularStd-Book.woff2") format('woff2'),
-    url("../fonts/CircularStd-Book.woff") format('woff');
+        url("../fonts/CircularStd-Book.woff2") format('woff2'),
+        url("../fonts/CircularStd-Book.woff") format('woff');
     font-weight: normal;
     font-style: normal;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Poppins';
     font-weight: 400;
     font-style: normal;
+    font-size: 14px;
     line-height: 20px;
     color: #C0C0C0;
     background-color: #000000;
 }
-header{
+
+header {
     background-color: #181818;
     padding: 24px 0;
 
 }
 
-header .container{
+header .container {
     max-width: 1200px;
     margin: auto;
     padding-left: 32px;
@@ -39,19 +43,21 @@ header .container{
     justify-content: space-between;
 }
 
-header nav ul{
+header nav ul {
     list-style: none;
     display: flex;
     align-items: center;
 }
 
-header nav ul li{
+header nav ul li {
     margin-left: 32px;
 }
-header nav ul li:first-of-type{
+
+header nav ul li:first-of-type {
     margin-right: 24px;
 }
-header nav a{
+
+header nav a {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -59,18 +65,18 @@ header nav a{
     line-height: 20px;
     /* identical to box height, or 133% */
 
-text-decoration: none;
+    text-decoration: none;
     color: #FFFFFF;
 }
 
-header nav li:first-of-type a{
+header nav li:first-of-type a {
     font-size: 13px;
 }
 
-header nav li:last-of-type a{
+header nav li:last-of-type a {
     background: #FFFFFF;
     border-radius: 14px;
-    padding:11px 20px;
+    padding: 11px 20px;
     font-size: 16px;
     letter-spacing: 0.4px;
     color: #000000;
@@ -78,27 +84,27 @@ header nav li:last-of-type a{
     display: inline-block;
 }
 
-header nav ul li:last-of-type{
+header nav ul li:last-of-type {
     margin-left: 31px;
 }
 
-.main_screen{
+.main_screen {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 71px;
     background-image: url(../images/bg.jpg);
     background-size: cover;
-     height: calc(100vh - 90px);
+    height: calc(100vh - 90px);
     max-height: 800px;
     background-color: #000000;
 }
 
-.main_screen article{
+.main_screen article {
     max-width: 580px;
 }
 
-.main_screen article h3{
+.main_screen article h3 {
     margin-bottom: 1px;
     font-size: 14px;
     line-height: 1.43;
@@ -109,18 +115,19 @@ header nav ul li:last-of-type{
     text-transform: uppercase;
 }
 
-.main_screen article h1{
+.main_screen article h1 {
     margin-bottom: 18px;
     color: #FFFFFF;
     font-size: 54px;
-    line-height: 1.1;/*59/54*/
+    line-height: 1.1;
+    /*59/54*/
     /* identical to box height, or 110% */
 
     text-align: center;
 
 }
 
-.main_screen article p{
+.main_screen article p {
     font-size: 14px;
     text-align: center;
 }
@@ -130,32 +137,35 @@ header nav ul li:last-of-type{
     padding-top: 113px;
     padding-bottom: 108px;
 }
-.photo-help article{
+
+.photo-help article {
     margin: 0 auto;
     max-width: 571px;
     text-align: center;
 }
-.photo-help article>h2{
+
+.photo-help article>h2 {
     font-size: 40px;
-line-height: 1.05; /* 42/40 */
-color: #FFFFFF;
-margin-bottom: 15px;
+    line-height: 1.05;
+    /* 42/40 */
+    color: #FFFFFF;
+    margin-bottom: 15px;
 }
 
-.photo-help article>h6{
-margin-bottom: 22px;
+.photo-help article>h6 {
+    margin-bottom: 22px;
 }
 
-.photo-help article>a{
+.photo-help article>a {
     display: inline-block;
     padding: 5px 10px 5px 4px;
     background-color: #fff;
     border-radius: 14px;
     color: black;
-letter-spacing: 0.4px;
+    letter-spacing: 0.4px;
 }
 
-.photo-help article>a::before{
+.photo-help article>a::before {
     content: '';
     display: inline-block;
     background-color: #000000;
@@ -165,7 +175,7 @@ letter-spacing: 0.4px;
     vertical-align: middle;
 }
 
-.sunset{
+.sunset {
     background-image: url("../images/sunset.jpg");
     background-size: cover;
     display: flex;
@@ -176,12 +186,12 @@ letter-spacing: 0.4px;
     padding-right: 60px;
 }
 
-.sunset article{
+.sunset article {
     max-width: 300px;
 
 }
 
-.sunset article h5{
+.sunset article h5 {
     font-size: 14px;
     line-height: 20px;
     /* identical to box height, or 143% */
@@ -191,7 +201,7 @@ letter-spacing: 0.4px;
     color: #ffffff;
 }
 
-.sunset article>p{
+.sunset article>p {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -201,73 +211,148 @@ letter-spacing: 0.4px;
     color: #C0C0C0;
 }
 
-.monstera{
+.monstera {
     background-image: url("../images/monstera.jpg");
 }
-.monstera article{
+
+.monstera article {
     padding-right: 27px;
 }
 
-.star-fall{
+.star-fall {
     background-image: url("../images/star-fall.jpg");
 }
-.star-fall article{
+
+.star-fall article {
     padding-right: 59px;
 }
 
-.clients{
+.clients {
     padding-top: 113px;
     padding-bottom: 100px;
     /*display: flex;*/
     /*max-width: 1200px;*/
 }
-.clients .container{
+
+.clients .container {
     max-width: 1168px;
     margin: 0 auto;
     text-align: center;
 }
 
-h2{
+h2 {
     font-size: 40px;
     line-height: 42px;
     color: #FFFFFF;
     margin-bottom: 15px;
 }
-h3{
+
+h3 {
     font-size: 23px;
     line-height: 30px;
     margin-bottom: 42px;
 }
-.flex-container{
+
+.flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 40px 36px;
 }
-/*.flex-container a{*/
-/*    margin: 0 10px;*/
-/*    width: 128px;*/
-/*}*/
 
-footer{
+footer {
     padding: 100px 0;
 }
-footer .flex-container{
+
+footer .flex-container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1168px;
     margin: 0 auto;
     flex-direction: row;
     align-items: flex-start;
+    padding: 0;
 }
-footer a{
+
+.info .logo{
     margin-bottom: 20px;
     display: inline-block;
 }
-.footer-list{
-max-width: 200px;
+
+.info [class*= -list] {
+    width: 220.8px;
+    color: white;
 }
 
-.footer-list .caption{
+.info [class*= -list] li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+h5 {
     text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #C0C0C0;
+}
+
+.info-container {
+    display: flex;
+    flex-basis: 457.6px;
+    margin-bottom: 36px;
+}
+
+.info-container ul:not(:last-child) {
+    margin-right: 16px;
+}
+
+.subtext {
+    font-size: 13px;
+}
+
+footer .subscribtion {
+    padding: 36px 0px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    align-items: center;
+}
+
+.subscribtion h5 {
+    margin-bottom: 20px;
+}
+
+.subscribtion form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 11px 6px;
+    width: 458px;
+    background-color: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribtion form input{
+    width: 80%;
+    background: transparent;
+    height: 30px;
+    color: black;
+    min-width: 100px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.subscribtion form button {
+    width: 63px;
+    padding: 15px 0px;
+    background-color: #000000;
+    border-radius: 11px;
+}
+footer .copyright-social{
+    padding-top: 56px;
+}
+.social a:not(:last-child){
+    margin-right: 20px;
 }
