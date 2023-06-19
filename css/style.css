@@ -30,7 +30,9 @@ body {
 header {
     background-color: #181818;
     padding: 24px 0;
-
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 header .container {
@@ -89,6 +91,7 @@ header nav ul li:last-of-type {
 }
 
 .main_screen {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -155,24 +158,27 @@ header nav ul li:last-of-type {
 .photo-help article>h6 {
     margin-bottom: 22px;
 }
-
-.photo-help article>a {
-    display: inline-block;
-    padding: 5px 10px 5px 4px;
-    background-color: #fff;
-    border-radius: 14px;
-    color: black;
+.with-buttons>a{
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
     letter-spacing: 0.4px;
+    background-color: white;
+    color: black;
+    padding: 5px 10px 5px 4px;
+    border-radius: 14px;
 }
 
-.photo-help article>a::before {
+.with-buttons a:before{
     content: '';
     display: inline-block;
-    background-color: #000000;
-    border-radius: 50%;
     padding: 16px;
     margin-right: 6px;
-    vertical-align: middle;
+    border-radius: 14px;
+    background-color: black;
+}
+.photo-help .with-button>a {
+    font-size: 16px;
 }
 
 .sunset {
@@ -184,6 +190,7 @@ header nav ul li:last-of-type {
     min-height: 600px;
     align-items: center;
     padding-right: 60px;
+    position: relative;
 }
 
 .sunset article {
@@ -213,6 +220,7 @@ header nav ul li:last-of-type {
 
 .monstera {
     background-image: url("../images/monstera.jpg");
+    position: relative;
 }
 
 .monstera article {
@@ -221,6 +229,7 @@ header nav ul li:last-of-type {
 
 .star-fall {
     background-image: url("../images/star-fall.jpg");
+    position: relative;
 }
 
 .star-fall article {
@@ -251,6 +260,12 @@ h3 {
     font-size: 23px;
     line-height: 30px;
     margin-bottom: 42px;
+}
+
+
+h4{
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .flex-container {
@@ -289,16 +304,14 @@ footer .flex-container {
     margin-bottom: 10px;
 }
 
-.caption {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #C0C0C0;
-}
-
 .info-container {
     display: flex;
     flex-basis: 457.6px;
     margin-bottom: 36px;
+}
+
+.info-container h4{
+    color: #C0C0C0;
 }
 
 .info-container ul:not(:last-child) {
@@ -356,3 +369,112 @@ footer .copyright-social{
 .social a:not(:last-child){
     margin-right: 20px;
 }
+
+.bottom-icons{
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+.bottom-icons li{
+    color: white;
+    font-size: 12px;
+    line-height: 12px;
+    display: flex;
+    align-items: flex-start;
+    padding-right: 2px;
+}
+
+.bottom-icons li:not(:last-child){
+    margin-right: 16px;
+
+}
+
+.bottom-icons li:before{
+    content:'';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    background-repeat: no-repeat;
+    background-image: url("../images/icons/shutter-icon.svg");
+}
+
+.bottom-icons li:nth-of-type(2):before{
+    background-image: url("../images/icons/aperture-icon.svg");
+}
+.bottom-icons li:nth-of-type(3):before{
+    background-image: url("../images/icons/iso-icon.svg");
+    width: 32px;
+}
+.bottom-icons li:last-of-type:before{
+    background-image: url("../images/icons/location-icon.svg");
+    width: 10px;
+}
+
+.bottom-icons li:last-of-type{
+    text-transform: capitalize;
+}
+
+.what-we-do{
+    padding-top: 120px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.gallery{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1168px;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    text-align: left;
+}
+
+.gallery-item{
+    max-width: 576px;
+    position: relative;
+}
+
+.gallery-item img{
+    width: 100%;
+}
+
+.gallery-item article{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    max-width: 546px;
+    padding-right: 30px;
+}
+
+.gallery-item h4{
+    margin-bottom: 10px;
+    color: white;
+}
+
+.gallery-item p{
+    margin-bottom: 10px;
+}
+
+/*.gallery-item a{*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*    font-size: 15px;*/
+/*    letter-spacing: 0.4px;*/
+/*    background-color: white;*/
+/*    color: black;*/
+/*    padding: 5px 10px 5px 4px;*/
+/*    border-radius: 14px;*/
+/*}*/
+
+/*.gallery-item a:before{*/
+/*    content: '';*/
+/*    display: inline-block;*/
+/*    padding: 16px;*/
+/*    margin-right: 6px;*/
+/*    border-radius: 4px;*/
+/*    background-color: black;*/
+/*}*/
+
