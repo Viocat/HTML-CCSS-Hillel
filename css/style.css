@@ -1,0 +1,9 @@
+@import url(reset.css);
+
+body{
+background-color: #D8D8D6;
+}
+
+.header__container {
+    background: #81A36B;
+}
