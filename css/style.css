@@ -6,6 +6,44 @@
     height: 100vh;
 }
 
+header{
+    background-color: black;
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+}
+
+.header-menu{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.logo{
+    font-size: 36px;
+}
+
+/* 
+    #tiger{
+        padding-top: 125px;
+        margin-top: -100px;
+        -webkit-background-clip: content-box;
+        background-clip: content-box;
+    }
+    #tiger div{
+    
+        margin-top: 76px;
+    } */
+
+.menu-list{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 50%;
+}
+
 .sidebar {
     position: fixed;
     top: 50%;
@@ -15,43 +53,43 @@
     font-weight: 400;
     font-size: 18px;
     color: #442b1a9f;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
-
-.sidebar li {
+.sidebar-list>li a {
     padding: 10px 0;
+    display: block;
 }
 
-.sidebar li:first-child {
+.sidebar-list>li:first-child a {
     padding-top: 0;
 }
 
-.sidebar li:last-child {
+.sidebar-list>li:last-child a{
     padding-bottom: 0;
 }
 
-.sidebar li:not(:first-child):hover,
-.sidebar li:not(:last-child):hover {
+.sidebar-list li:not(:first-child) a:hover,
+.sidebar-list li:not(:last-child) a:hover {
     font-size: 22px;
     padding: 8px 0;
     color: #5b3b1d;
 }
 
 
-.sidebar li:first-child:hover {
+.sidebar-list>li:first-child a:hover {
     font-size: 22px;
     padding: 0 0 6px 0;
 }
 
-.sidebar li:last-child:hover {
+.sidebar-list>li:last-child a:hover {
     font-size: 22px;
     padding: 6px 0 0;
 }
 
-.sidebar li:hover .sidebar {
-    color: grey;
-}
+/* .sidebar a:hover + .sidebar {
+    background-color: rgb(219, 84, 84);
+} */
 
 
 .container {
@@ -84,6 +122,7 @@
 .text-container {
     position: absolute;
     top: 50%;
+    /* top: calc(50%+76px); */
     left: 0;
     transform: translateY(-50%);
     padding: 40px 30px;
