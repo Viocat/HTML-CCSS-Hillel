@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HT Lesson6 Flex</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-menu">
+
+                <a href="#" class="logo">V.S</a>
+                <ul class="menu">
+
+                    <li><a class="menu__link" href="index.html">Home Page</a></li>
+                    <li><a class="menu__link" href="gallery.html">Gallery</a></li>
+                    <li class="menu-item droppable">
+                        <a class="menu__link" href="#">Homeworks</a>
+                        <div class="sub-menu__box">
+
+                            <ul class="sub-menu lvl-1">
+                                <li class="sub-menu__item">
+                                    <a class="sub-menu__link" href="#">inline-block</a>
+                                </li>
+                                <li class="sub-menu__item">
+                                    <a class="sub-menu__link" href="float.html">float</a>
+                                </li>
+                                <li class="sub-menu__item droppable">
+                                    <a class="sub-menu__link" href="#">blocks</a>
+                                    <div class="sub-menu__box blocks">
+
+                                        <ul class="sub-menu blocks__sub-menu lvl-2">
+                                            <li class="blocks__sub-menu__item">
+                                                <a class="sub-menu__link" href="flex.html">flex</a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="flex-page">
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div class="two-third">
+                <div class="half-height">4</div>
+                <div class="half-height">5</div>
+            </div>
+            <div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+            <div>9</div>
+            <div class="two-third">
+                <div class="half-height">10</div>
+                <div class="two-third half-height">
+                    <div class="half-width">11</div>
+                    <div class="half-width">
+                        <div class="half-height">12</div>
+                        <div class="half-height">13</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
