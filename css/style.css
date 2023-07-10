@@ -150,12 +150,12 @@ header{
 .lvl-1{
     font-family: 'Open-Sans-Condensed';
     font-weight: 400;
-    color: orange;
+    /* color: orange; */
 }
 .lvl-2{
     font-family: 'Roboto';
     font-weight: 400;
-    color: aqua;
+    /* color: aqua; */
 }
 
 .sub-menu__item {
