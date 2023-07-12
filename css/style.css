@@ -1,39 +1,57 @@
 @import url(reset.css);
-@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Bacasime+Antique:regular);
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('Montserrat-Regular.woff2') format('woff2'),
-        url('Montserrat-Regular.woff') format('woff');
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff');
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Open-Sans-Condensed';
-    src: url('OpenSansCondensed-Regular.woff2') format('woff2'),
-        url('OpenSansCondensed-Regular.woff') format('woff');
+    src: url('../fonts/OpenSansCondensed-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSansCondensed-Regular.woff') format('woff');
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('Roboto-Regular.woff2') format('woff2'),
-        url('Roboto-Regular.woff') format('woff');
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('Merriweather-Regular.woff2') format('woff2'),
-        url('Merriweather-Regular.woff') format('woff');
+    src: url('../fonts/Merriweather-Regular.woff2') format('woff2'),
+        url('../fonts/Merriweather-Regular.woff') format('woff');
     font-weight: 400;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Carattere';
+    src: url('../fonts/carattere/Carattere-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+
 /*___________GLOBAL STYLES____________*/
+@keyframes move-light{
+    from {
+        left: -80%;
+    }
+    to{
+        left: 100%
+    }
+}
 
 html {
     font-size: 10px;
@@ -45,7 +63,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto';
+    font-family: 'Bacasime Antique';
     font-weight: 400;
     font-size: 1.6rem;
 }
@@ -83,7 +101,7 @@ header {
 }
 
 .header-menu {
-    color: white;
+    color: #999;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
@@ -92,13 +110,15 @@ header {
 
 .logo {
     font-size: 3.6rem;
+    color: white;
 }
 
 .menu {
     display: flex;
     justify-content: space-between;
     flex-basis: 50%;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
+    font-size: 1.8rem;
     font-weight: 400;
     text-transform: capitalize;
 }
@@ -107,14 +127,40 @@ header {
     position: relative;
 }
 
+.menu>li:hover .menu__link>.icon, .menu>li:hover .menu__link{
+    fill:white;
+    color: white;
+}
+
 .menu__link {
     display: inline-block;
     position: relative;
     padding: 10px 20px 10px 46px;
+    overflow: hidden;
+}
+
+.menu__link::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -80%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(249, 219, 144, 0.692) 50%, rgba(255,255,255,0) 85%);
+    rotate: 135deg;
 }
 
 .menu__link:hover {
-    background-color: #aca6a24f;
+    /* ыщьу срфтпуы */
+    /* background-color: #aca6a241; */
+    background-color: rgba(29, 65, 79, 0.503);
+}
+
+.menu__link:hover::before{
+    animation-name: move-light;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
 }
 
 .homeworks>.menu__link>svg {
@@ -126,11 +172,16 @@ header {
     position: absolute;
     top: calc(50% - 8px);
     left: 20px;
-    fill: white;
+    fill: #999;
     width: 16px;
     height: 16px;
     transform-origin: center;
 
+}
+
+.home-icon{
+    width: 16px;
+    height: 15px;
 }
 
 .homeworks .menu__link {
@@ -204,10 +255,13 @@ header {
     visibility: visible;
     left: 2px;
     width: 16px;
+    fill: white;
 }
 
 .sub-menu__link:hover {
-    background-color: #aca6a24f;
+    /* background-color: #aca6a24f; */
+    background-color: rgba(29, 65, 79, 0.503);
+    color: white;
 }
 
 .blocks {
@@ -332,6 +386,7 @@ footer {
     position: unset;
     width: 45px;
     height: 45px;
+    fill: white;
 }
 
 /*___________GALLERY-page STYLES____________*/
@@ -506,3 +561,18 @@ li>img {
 }
 
 /*some text for commit*/
+.float-page{
+    color: black;
+}
+.m{
+
+}
+.m-list{
+display: flex;
+}
+.m-list__item{
+padding: 2px;
+}
+.m-list__link{
+
+}
