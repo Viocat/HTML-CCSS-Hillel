@@ -593,19 +593,6 @@ li>img {
     border-right: none;
 }
 
-/*some text for commit*/
 .float-page {
     color: black;
 }
-
-.m {}
-
-.m-list {
-    display: flex;
-}
-
-.m-list__item {
-    padding: 2px;
-}
-
-.m-list__link {}
