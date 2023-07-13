@@ -44,11 +44,12 @@
 
 
 /*___________GLOBAL STYLES____________*/
-@keyframes move-light{
+@keyframes move-light {
     from {
         left: -80%;
     }
-    to{
+
+    to {
         left: 100%
     }
 }
@@ -127,8 +128,9 @@ header {
     position: relative;
 }
 
-.menu>li:hover .menu__link>.icon, .menu>li:hover .menu__link{
-    fill:white;
+.menu>li:hover .menu__link>.icon,
+.menu>li:hover .menu__link {
+    fill: white;
     color: white;
 }
 
@@ -139,7 +141,7 @@ header {
     overflow: hidden;
 }
 
-.menu__link::before{
+.menu__link::before {
     content: '';
     display: block;
     position: absolute;
@@ -147,7 +149,7 @@ header {
     left: -80%;
     height: 100%;
     width: 100%;
-    background: linear-gradient(180deg, rgba(255,255,255,0) 15%, rgba(249, 219, 144, 0.692) 50%, rgba(255,255,255,0) 85%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 15%, rgba(249, 219, 144, 0.692) 50%, rgba(255, 255, 255, 0) 85%);
     rotate: 135deg;
 }
 
@@ -156,7 +158,7 @@ header {
     background-color: rgba(29, 65, 79, 0.503);
 }
 
-.menu__link:hover::before{
+.menu__link:hover::before {
     animation-name: move-light;
     animation-duration: 0.5s;
     animation-delay: 0.2s;
@@ -178,7 +180,7 @@ header {
 
 }
 
-.home-icon{
+.home-icon {
     width: 16px;
     height: 15px;
 }
@@ -200,8 +202,19 @@ header {
     transform: rotate(90deg);
 }
 
+.droppable:hover>.sub-menu__box::before {
+    bottom: 0;
+    z-index: 0;
+}
+
+.droppable:hover>.sub-menu__box.lvl-2::before {
+    left: 0;
+    z-index: 0;
+}
+
 .droppable:hover>.sub-menu__box {
     visibility: visible;
+    color: inherit;
 }
 
 .sub-menu__box {
@@ -211,17 +224,38 @@ header {
     right: 0;
     min-width: 100%;
     max-width: fit-content;
+    color: transparent;
     visibility: hidden;
-    z-index: 1;
+    z-index: 2;
+    transition: color 0s;
+    transition-delay: 0.2s;
 }
 
-.sub-menu {
+.sub-menu__box::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
     background-color: black;
+    z-index: 1;
+    transition: 0.2s;
 }
+
+.sub-menu__box.lvl-2::before {
+    left: 97%;
+    right: 2px;
+    bottom: 0px;
+}
+
+.sub-menu {}
 
 .lvl-1 {
     font-family: 'Open-Sans-Condensed';
     font-weight: 400;
+
 }
 
 .lvl-2 {
@@ -259,7 +293,7 @@ header {
 
 .sub-menu__link:hover {
     /* background-color: #aca6a24f; */
-    background-color: rgba(29, 65, 79, 0.503);
+    background-color: rgba(35, 77, 94, 0.532);
     color: white;
 }
 
@@ -371,17 +405,17 @@ footer {
     color: white;
 }
 
-.socials{
+.socials {
     margin: 0 auto;
     width: fit-content;
 }
 
-.socials__link:not(:last-of-type){
+.socials__link:not(:last-of-type) {
     display: inline-block;
     margin-right: 20px;
 }
 
-.socials .icon{
+.socials .icon {
     position: unset;
     width: 45px;
     height: 45px;
@@ -560,18 +594,18 @@ li>img {
 }
 
 /*some text for commit*/
-.float-page{
+.float-page {
     color: black;
 }
-.m{
 
-}
-.m-list{
-display: flex;
-}
-.m-list__item{
-padding: 2px;
-}
-.m-list__link{
+.m {}
 
+.m-list {
+    display: flex;
 }
+
+.m-list__item {
+    padding: 2px;
+}
+
+.m-list__link {}
