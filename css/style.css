@@ -241,7 +241,7 @@ header {
     bottom: 100%;
     background-color: black;
     z-index: 1;
-    transition: 0.2s;
+    transition: 0.2s cubic-bezier(.45,-0.67,.53,1.63);
 }
 
 .sub-menu__box.lvl-2::before {
