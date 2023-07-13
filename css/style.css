@@ -265,7 +265,7 @@ header {
 
 .sub-menu__item {}
 
-.sub-menu__item:first-child {
+.lvl-1>.sub-menu>.sub-menu__item:first-of-type {
     margin-top: 10px;
 }
 
@@ -302,7 +302,7 @@ header {
     top: 0;
 }
 
-.blocks__sub-menu {
+.blocks>.sub-menu {
     margin-right: 2px;
 }
 
