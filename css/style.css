@@ -240,7 +240,12 @@ scale: 120%;
 align-items: center;
 transform: translateX(160px);
 transition: all 1s;
+}
 
+.cover{
+    position: absolute;
+    width: 40;
+    background-color: red;
 }
 
 .right-icon__container {
@@ -250,6 +255,7 @@ transition: all 1s;
     /* transform: translateX(200px);
     top: 50%;
     left: -40px; */
+    line-height: 10px;
 
     border-radius: 5px 0px 0px 5px;
     outline: 1px solid black;
