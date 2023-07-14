@@ -131,7 +131,7 @@ h2 {
     width: 200px;
 }
 
-.left-sidebar:hover .icon-container::before{
+.left-sidebar:hover .icon-before::before{
     visibility: visible;
     animation-name: move-light;
     animation-duration: 0.2s;
@@ -161,7 +161,7 @@ h2 {
     transition-delay: 0.2s;
 }
 
-.icon-container::before{
+.icon-before::before{
     content: '';
     display: block;
     visibility: hidden;
@@ -235,7 +235,7 @@ scale: 120%;
     transition: 1s;
 }
 
-.right-icon__container {
+.right-sidebar .icon-container {
     padding: 20px;
     position: absolute;
     transform-origin: 50%;
@@ -265,13 +265,9 @@ scale: 120%;
     animation-iteration-count: infinite;
 }
 
-.right-icon__container:hover .icon.roll{
-    animation-play-state: paused;
-}
-
 .right-menu{
     background-color: rgba(0, 0, 0, 0.466);
-    padding: 30px 20px;
+    padding: 20px 10px;
     border-radius: 5px 0px 0px 5px;
     min-width: 200px;
     border: 1px solid black;
@@ -279,21 +275,40 @@ scale: 120%;
     color: white;
 }
 
-.right-menu__item::not(:last-of-type){
+.right-menu>li{
+    text-align: center;
+}
+
+.right-menu>li:not(:last-of-type){
 margin-bottom: 10px;
 }
 
-.right-sidebar:hover .icon{
+.right-menu a{
+    position: unset;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.right-menu a:hover{
+    background-color: #245b7897;
+}
+
+.right-sidebar:hover .icon.roll{
     animation-play-state: paused;
+}
+
+.right-sidebar:hover .icon-before::before{
+    visibility: visible;
+    animation-name: move-light;
+    animation-duration: 0.2s;
+    animation-delay: 0s;
 }
 
 .right-sidebar:hover{
     transform: translate(0px, -50%);
 }
-
-/* .rsb:hover{
-    transform: translate(0px);
-} */
 
 
 /*___________HEADER STYLES____________*/
