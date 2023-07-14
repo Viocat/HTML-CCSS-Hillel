@@ -224,41 +224,28 @@ scale: 120%;
 /*___________Aside rigth STYLES____________*/
 
 .right-sidebar {
-    /* background-color: #afafaf; */
     position: fixed;
     display: flex;
     align-items: center;
-    transform: translateY(-50%);
+    transform: translate(100% , -50%);
     max-width: 200px;
-    /* overflow: hidden; */
     top: 50%;
     right: 0;
     z-index: 7;
-}
-.rsb{
-    display: flex;
-align-items: center;
-transform: translateX(160px);
-transition: all 1s;
-}
-
-.cover{
-    position: absolute;
-    width: 40;
-    background-color: red;
+    transition: 1s;
 }
 
 .right-icon__container {
     padding: 20px;
-    position: relative;
+    position: absolute;
     transform-origin: 50%;
-    /* transform: translateX(200px);
     top: 50%;
-    left: -40px; */
+    left: 0;
+    transform: translate(-100%, -50%);
     line-height: 10px;
-
     border-radius: 5px 0px 0px 5px;
-    outline: 1px solid black;
+    border: 1px solid black;
+    border-right: none;
     background-color: rgba(0, 0, 0, 0.466);
 }
 
@@ -285,15 +272,28 @@ transition: all 1s;
 .right-menu{
     background-color: rgba(0, 0, 0, 0.466);
     padding: 30px 20px;
-    width: 200px;
+    border-radius: 5px 0px 0px 5px;
+    min-width: 200px;
     border: 1px solid black;
     z-index: 9;
     color: white;
 }
 
-.rsb:hover{
-    transform: translate(0px);
+.right-menu__item::not(:last-of-type){
+margin-bottom: 10px;
 }
+
+.right-sidebar:hover .icon{
+    animation-play-state: paused;
+}
+
+.right-sidebar:hover{
+    transform: translate(0px, -50%);
+}
+
+/* .rsb:hover{
+    transform: translate(0px);
+} */
 
 
 /*___________HEADER STYLES____________*/
