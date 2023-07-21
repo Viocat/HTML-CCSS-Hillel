@@ -1,20 +1,48 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header></header>
     <main>
         <section class="form-section">
             <form action="#" method="post" enctype="multipart/form-data">
-                <div>
-                    <input type="checkbox" name="" id="">
+                <div class="switcher-box">выбор</div>
+                <div class="entrance">
+                    <h2>вход</h2>
+                    <input type="email" name="e-mail" id="e-mail" placeholder="Введите E-mail" class="mail-input">
+                    <input type="password" name="password" id="user-password" placeholder="Пароль" class="password-input">
+                    <div class="box">
+                        <!-- <div class="input-box"> -->
+                            <input type="checkbox" name="remember-me" id="remember-me">
+                        <label for="remember-me" class="checkbox-label">Запомнить меня</label>
+                        <!-- </div> -->
+                        <a href="#" class="link green">Забыли пароль?</a>
+                    </div>
+                    <button type="submit" class="submit-btn">войти</button>
+                    <div class="box">
+                        <span class="green">Ещё нет аккаунта ?</span>
+                        <a href="#" class="link">Зарегистрироваться</a>
+                    </div>
+                    <div>
+                        <h6 class="green">Или войдите через</h6>
+                        <div>
+                            <svg>
+                                <use></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="registration">
+                YOU CAN REGITER HERE
                 </div>
             </form>
         </section>
@@ -22,4 +50,5 @@
     <footer></footer>
 
 </body>
+
 </html>
