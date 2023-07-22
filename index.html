@@ -32,12 +32,14 @@
                     <div class="input-wrapper">
                         <input type="password" name="password" id="user-password" placeholder="Пароль"
                         class="password-input">
-                        <svg class="icon eye-on-icon">
-                            <use href="assets/images/icons/sprite.svg#eye-on-icon"></use>
-                        </svg>
-                        <svg class="icon eye-off-icon hidden">
-                            <use href="assets/images/icons/sprite.svg#eye-off-icon"></use>
-                        </svg>
+                        <div class="eye-icons-container" data-eye>
+                            <svg class="icon eye-on-icon" data-eye>
+                                <use href="assets/images/icons/sprite.svg#eye-on-icon" data-eye></use>
+                            </svg>
+                            <svg class="icon eye-off-icon hidden" data-eye>
+                                <use href="assets/images/icons/sprite.svg#eye-off-icon" data-eye></use>
+                            </svg>
+                        </div>
                     </div>
                     <div class="box">
                         <input type="checkbox" name="remember-me" id="remember-me">

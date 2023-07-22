@@ -87,8 +87,7 @@ form {
 
 .entrance,
 .registration{
-    max-width: 34rem;
-    min-width: 30rem;
+    width: 34rem;
     transition: 0.2s;
 }
 
@@ -142,6 +141,19 @@ input:focus {
     margin-bottom: 0;
 }
 
+.eye-icons-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
 .icon{
     width: 2rem;
     height: 2rem;
@@ -149,10 +161,6 @@ input:focus {
 
 .eye-on-icon,
 .eye-off-icon{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 1rem;
     fill: none;
     stroke: #153416;
 }
