@@ -126,12 +126,35 @@ input:focus {
     color: transparent;
 }
 
-[class$="-input"]:not(:last-of-type) {
+/* !!!!!!!  отступ между инпутами */
+.mail-input{
     margin-bottom: 1.5rem;
 }
 
-[class$="-input"]:last-of-type {
+.input-wrapper{
+    position: relative;
     margin-bottom: 2.1rem;
+}
+
+.password-input{
+    padding-right: 4rem;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.eye-on-icon,
+.eye-off-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    fill: none;
+    stroke: #153416;
 }
 
 .box {
@@ -204,6 +227,23 @@ input:focus {
 .socials-box h6 {
     margin-bottom: 2rem;
 }
+
+.socials-group{
+    display: flex;
+    gap: 2rem;
+}
+
+.social-icon{
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: #153416;
+}
+
+.fb-icon{
+    width: 1.4rem;
+}
+
+
 
 .hidden{
     display: none;
