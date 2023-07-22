@@ -7,7 +7,8 @@ html {
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 *:focus {
@@ -23,8 +24,9 @@ body {
     font-weight: 400;
     display: flex;
     flex-direction: row-reverse;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(184deg, #16151580 0%, #16151580 100%), url(../assets/images/background.jpg) center/cover no-repeat;
+    background-attachment: fixed;
 }
 
 form {
@@ -36,14 +38,61 @@ form {
 }
 
 .switcher-box {
+    position: relative;
+    display: flex;
+    padding: 2px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #153416;
     margin-bottom: 7.5rem;
+    overflow: hidden;
+    z-index: 5;
 }
 
-.entrance {
+[name*="switcher-radio"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.switcher-label {
+    flex: 1 1 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.slider {
+    content: '';
+    position: absolute;
+    left: 2px;
+    transform: translateX(0);
+    top: 2px;
+    bottom: 2px;
+    width: 50%;
+    border-radius: 30px;
+    background: #153416;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+[name="switcher-radio"]:checked+.slider {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.entrance,
+.registration{
     max-width: 34rem;
+    min-width: 30rem;
+    transition: 0.2s;
 }
 
-.entrance h2 {
+form h2 {
     text-transform: capitalize;
     font-size: 3rem;
     text-align: center;
@@ -129,11 +178,11 @@ input:focus {
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 } */
 
-.link{
+.link {
     text-decoration: underline;
 }
 
-.green{
+.green {
     color: #153416;
 }
 
@@ -146,15 +195,21 @@ input:focus {
     margin-bottom: 4rem;
 }
 
+.socials-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.socials-box h6 {
+    margin-bottom: 2rem;
+}
 
-
-.link {}
-
-.pswrd-restore__link {}
-
-.regitstration__link {}
-
-.registration {
+.hidden{
     display: none;
+}
+
+.register-content{
+    width: 100%;
+    text-align: center;
 }

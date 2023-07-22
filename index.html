@@ -15,7 +15,17 @@
     <main>
         <section class="form-section">
             <form action="#" method="post" enctype="multipart/form-data">
-                <div class="switcher-box">выбор</div>
+                <div class="switcher-box">
+                    <label for="switch-enter" class="switcher-label">Вход</label>
+                    <input type="radio" name="switcher-radio" id="switch-enter" value="enter" checked>
+
+                    
+                    <label for="switch-register" class="switcher-label">Регистрация</label>
+                    <input type="radio" name="switcher-radio" id="switch-register" value="register">
+
+
+                    <span class="slider"></span>
+                </div>
                 <div class="entrance">
                     <h2>вход</h2>
                     <input type="email" name="e-mail" id="e-mail" placeholder="Введите E-mail" class="mail-input">
@@ -32,23 +42,24 @@
                         <span class="green">Ещё нет аккаунта ?</span>
                         <a href="#" class="link">Зарегистрироваться</a>
                     </div>
-                    <div>
+                    <div class="socials-box">
                         <h6 class="green">Или войдите через</h6>
-                        <div>
-                            <svg>
-                                <use></use>
-                            </svg>
-                        </div>
+                            <img src="assets/images/icons/socials.svg" alt="">
                     </div>
                 </div>
-                <div class="registration">
-                YOU CAN REGITER HERE
+                <div class="registration hidden">
+                    <div class="register-content">
+                        <h2>YOU COULD REGISTER HERE</h2>
+                        <h2>but for now - there'll be a lorem text</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto consequatur debitis dicta et fuga fugiat laborum necessitatibus porro sint tempora vel, voluptatem. Aspernatur at corporis deserunt dolorem enim est et, excepturi fugiat inventore laborum maxime obcaecati recusandae rem sint vero. A culpa doloribus dolorum ducimus enim illum in minima quam temporibus velit? Aspernatur deserunt facilis illum ipsa laborum magni optio porro provident quasi quisquam, repellat unde vitae voluptatem! A accusantium cupiditate dolor et eveniet iusto natus non nulla quam quibusdam? Eligendi eveniet explicabo fugit illum incidunt ipsum maiores, minima omnis quisquam quo suscipit ut, veniam voluptas. Ab accusantium ad architecto aut cum facere fugiat in laboriosam, libero maiores natus nemo, non perferendis perspiciatis quasi quisquam quo rem sit soluta ullam velit voluptatem voluptates. Doloremque, eaque, reprehenderit. Accusantium ad aliquam aperiam architecto debitis dicta doloremque illo impedit minima molestiae nobis obcaecati officiis porro, quaerat quas repudiandae ut voluptas. Assumenda dolore earum et ex fuga quaerat repellendus sit voluptate. A, ab accusamus deleniti eum facere illo illum ipsum magnam maxime mollitia pariatur quaerat reprehenderit unde? Blanditiis eius enim eos explicabo illum iste quasi repudiandae sed vel veniam. A animi, aperiam aspernatur aut consectetur cum debitis deleniti dicta dolore dolorem earum est eum eveniet facilis fugiat fugit harum id, incidunt laborum magnam magni maiores maxime nihil nobis porro possimus quasi quos sapiente sed temporibus, ullam unde velit vitae! Accusantium ad alias architecto commodi culpa cumque deserunt ea error excepturi fuga incidunt ipsum iste laudantium maiores minus molestias natus nesciunt nisi non nostrum, officia quaerat qui quibusdam reiciendis saepe similique sit sunt totam ullam veritatis? Atque aut, deserunt dignissimos ducimus fuga ipsa ipsum nulla omnis quas qui quibusdam unde, velit voluptates? Ad aliquid beatae dolor eaque eius explicabo impedit ipsam nisi officiis perspiciatis quam quo reiciendis sapiente similique sit tempore, tenetur vero voluptates?</p>
+                    </div>
                 </div>
             </form>
         </section>
     </main>
     <footer></footer>
 
+    <script src="js/index.js"></script>
 </body>
 
 </html>
