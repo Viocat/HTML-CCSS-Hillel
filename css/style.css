@@ -60,6 +60,10 @@ header {
     padding: 25px 0;
 }
 
+header .logo{
+    margin-right: 80px;
+}
+
 .nav-list {
     display: flex;
     gap: 90px;
@@ -69,7 +73,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+}
+
+.safe-magin-right{
+    margin-right: 10px;
+}
+
+.safe-magin-left{
+    margin-left: 10px;
 }
 
 .space-between {
@@ -82,12 +94,12 @@ header {
     margin-bottom: 120px;
 }
 
-article {
+.small-container {
     max-width: 540px;
 }
 
-article>h1:not(:last-child),
-article>h3:not(:last-child) {
+.small-container>h1:not(:last-child),
+.small-container>h3:not(:last-child) {
     margin-bottom: 60px;
 }
 
@@ -95,7 +107,7 @@ h1 {
     font-size: 62px;
     font-family: 'Vetrino';
     line-height: 1.081;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .amelia>p:last-of-type{
@@ -144,6 +156,7 @@ h3 {
     align-items: center;
     text-align: center;
     font-size: 18px;
+    align-items: baseline;
 }
 
 .advantages-list img {
@@ -158,6 +171,10 @@ h3 {
 
 .gallery-container h3 {
     margin-bottom: 80px;
+}
+
+.gallery{
+    gap: 15px;
 }
 
 .gallery-item {
@@ -210,6 +227,74 @@ footer .logo {
     margin-left: -77.5px;
 }
 
+.gap_15{
+    gap: 15px;
+}
+@media screen and (max-width: 1120px) {
+    .small-container,
+    .image-box{
+        max-width: 49%;
+    }
+    .image-box img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .gallery{
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+    .gallery-item{
+        max-width: 33%;
+        padding: 10px 10px;
+    }
+
+    .gallery-item img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1085px) {
+    .nav-list{
+        gap: 70px;
+    }
+}
+
+@media screen and (max-width: 1071px) {
+    .buttons{
+        max-width: 100%;
+        gap: 10px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 1065px){
+     header .logo{
+        margin-right: 50px;
+    }
+    .nav-list{
+        gap:50px;
+    }
+
+    h1{
+        font-size: 54px ;
+    }
+
+    .advantages-list{
+        gap: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 819px){
+    .nav-list{
+        display: none;
+    }
+}
+
 .created {
     font-size: 16px;
     font-family: Montserrat;
@@ -220,3 +305,4 @@ footer .logo {
 #about-us-anchor{
     margin-top: 1px;
 }
+
